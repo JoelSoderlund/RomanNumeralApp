@@ -27,9 +27,9 @@ namespace RomanNumeral
 
             Regex r = new Regex("[^ABEFGHJKNOPQRSTUWYZÅÄÖ.$ ]$"); 
             
-            while (r.IsMatch(userInput)) //Kontrollerar så att endast skriv in romserska siffror
+            while (!r.IsMatch(userInput)) //Kontrollerar så att endast skriv in romserska siffror
             {
-
+                //Kod som körs om användaren skrivit fel...
             }
 
             //Kontrollera max 15 tecken

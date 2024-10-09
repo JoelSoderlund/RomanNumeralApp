@@ -18,7 +18,7 @@ namespace RomanNumeral
                 
                 foreach (char c in checkInput)
                 {
-                    if (c == 'I' || c == 'V' || c == 'X' || c == 'L' || c == 'C' || c == 'D' || c == 'M')
+                    if (userInput.Length <= 15 && c == 'I' || c == 'V' || c == 'X' || c == 'L' || c == 'C' || c == 'D' || c == 'M')
                     {
                         isValidInput = true;
                     }
@@ -29,9 +29,6 @@ namespace RomanNumeral
                     }
                 }
             }
-
-
-
 
 
             var romanNums = new Dictionary<char, int>

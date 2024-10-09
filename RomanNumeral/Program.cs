@@ -13,7 +13,7 @@ namespace RomanNumeral
                 Console.WriteLine("Ange ett Romerskt tal: ");
                 var userInput = Console.ReadLine().ToUpper();
 
-                if (r.IsMatch(userInput))
+                if (!r.IsMatch(userInput))
                     break;
             }
 

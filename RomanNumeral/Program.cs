@@ -10,20 +10,7 @@
 
             //Ta emot sträng
             //Kontrollera max 15 tecken
-            //Kontrollera att den innehåller endast I V X L C D M (Regex?)
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //Kontrollera att den innehåller endast I V X L C D M (Regex
 
         }
     }

@@ -6,15 +6,28 @@ namespace RomanNumeral
     {
         static void Main(string[] args)
         {
-            Regex r = new Regex("[^IVXLCDM.$ ]$");
+            bool isValidInput = false;
 
-            while (true) //Kontrollerar så att endast skriv in romserska siffror
+            while (!isValidInput) //Kontrollerar så att endast skriv in romserska siffror
             {
+
                 Console.WriteLine("Ange ett Romerskt tal: ");
                 var userInput = Console.ReadLine().ToUpper();
 
-                if (!r.IsMatch(userInput))
-                    break;
+                char[] checkInput = userInput.ToCharArray();
+                
+                foreach (char c in checkInput)
+                {
+                    if (c == 'I' || c == 'V' || c == 'X' || c == 'L' || c == 'C' || c == 'D' || c == 'M')
+                    {
+                        isValidInput = true;
+                    }
+                    else
+                    {
+                        isValidInput = false;
+                        break;
+                    }
+                }
             }
 
 

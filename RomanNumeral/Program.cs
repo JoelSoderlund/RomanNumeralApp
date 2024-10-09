@@ -1,4 +1,6 @@
-﻿namespace RomanNumeral
+﻿using System.Text.RegularExpressions;
+
+namespace RomanNumeral
 {
     internal class Program
     {
@@ -23,13 +25,15 @@
             };
 
 
+            Regex r = new Regex("[^ABEFGHJKNOPQRSTUWYZÅÄÖ.$ ]$"); 
+            
+            while (r.IsMatch(userInput)) //Kontrollerar så att endast skriv in romserska siffror
+            {
 
-            //HEJ!
+            }
 
-
-            //Ta emot sträng
             //Kontrollera max 15 tecken
-            //Kontrollera att den innehåller endast I V X L C D M (Regex?)
+     
 
 
 

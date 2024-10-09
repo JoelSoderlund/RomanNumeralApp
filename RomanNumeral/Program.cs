@@ -6,9 +6,17 @@ namespace RomanNumeral
     {
         static void Main(string[] args)
         {
+            Regex r = new Regex("[^IVXLCDM.$ ]$");
 
-            Console.WriteLine("Ange ett Romerskt tal: ");
-            var userInput = Console.ReadLine().ToUpper();
+            while (true) //Kontrollerar så att endast skriv in romserska siffror
+            {
+                Console.WriteLine("Ange ett Romerskt tal: ");
+                var userInput = Console.ReadLine().ToUpper();
+
+                if (r.IsMatch(userInput))
+                    break;
+            }
+
 
 
 
@@ -25,15 +33,11 @@ namespace RomanNumeral
             };
 
 
-            Regex r = new Regex("[^ABEFGHJKNOPQRSTUWYZÅÄÖ.$ ]$"); 
-            
-            while (!r.IsMatch(userInput)) //Kontrollerar så att endast skriv in romserska siffror
-            {
-                //Kod som körs om användaren skrivit fel...
-            }
+
+
 
             //Kontrollera max 15 tecken
-     
+
 
 
 
